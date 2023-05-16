@@ -27,6 +27,18 @@ public class DriveController {
         backRight.setPower(-rightStickY);
     }
 
+    public void driveDir(char dir, float pow) {
+        switch(dir) {
+            case 'f':
+                this.drive(1*pow, 1*pow);
+            case 'b':
+                this.drive(-1*pow, -1*pow);
+            case 'l':
+                this.drive(-1*pow, 1*pow);
+            case 'r':
+                this.drive(1*pow, -1*pow);
+        }
 
+    }
 
 }

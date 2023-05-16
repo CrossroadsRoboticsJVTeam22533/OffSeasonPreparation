@@ -28,7 +28,10 @@ public class ExampleTeleOp extends LinearOpMode {
 
         while(!isStopRequested()) {
 
-            driveController.drive(gamepad1.left_stick_y, gamepad1.right_stick_y);
+            //driveController.drive(gamepad1.left_stick_y, gamepad1.right_stick_y);
+            driveController.driveDir('f', 0.5f);
+            driveController.driveDir('r', 0.75f);
+            driveController.driveDir('b',1.0f);
 
         }
 
